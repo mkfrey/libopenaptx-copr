@@ -1,8 +1,8 @@
 %global sonamebase 0
 
 Name:           libopenaptx
-Version:        %{sonamebase}.2.1
-Release:        1%{?dist}
+Version:        %{sonamebase}.2.0
+Release:        4%{?dist}
 Summary:        Open Source implementation of Audio Processing Technology codec (aptX)
 
 License:        LGPLv2+
@@ -61,6 +61,9 @@ command-line utilities.
 %{_bindir}/openaptxdec
 
 %changelog
+* Sat Jul 03 2021 Markus Frey <mfrey@mailbox.org> - 0.2.0-4
+- Revert version dump
+
 * Sat Jul 03 2021 Markus Frey <mfrey@mailbox.org> - 0.2.1-1
 - Bump version
 
