@@ -1,12 +1,12 @@
 %global sonamebase 0
 
-Name:           libopenaptx
-Version:        %{sonamebase}.2.0
-Release:        4%{?dist}
+Name:           libfreeaptx
+Version:        %{sonamebase}.1.1
+Release:        1%{?dist}
 Summary:        Open Source implementation of Audio Processing Technology codec (aptX)
 
 License:        LGPLv2+
-URL:            https://github.com/pali/%{name}
+URL:            https://github.com/iamthehorker/%{name}
 Source0:        %{url}/releases/download/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  gcc
@@ -30,7 +30,7 @@ The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
 %description    tools
-The %{name}-tools package contains openaptxenc encoder and openaptxdec decoder
+The %{name}-tools package contains freeaptxenc encoder and freeaptxdec decoder
 command-line utilities.
 
 %prep
@@ -53,25 +53,13 @@ command-line utilities.
 %files devel
 %{_libdir}/%{name}.so
 %{_libdir}/%{name}.so
-%{_includedir}/openaptx.h
+%{_includedir}/freeaptx.h
 %{_libdir}/pkgconfig/%{name}.pc
 
 %files tools
-%{_bindir}/openaptxenc
-%{_bindir}/openaptxdec
+%{_bindir}/freeaptxenc
+%{_bindir}/freeaptxdec
 
 %changelog
-* Sat Jul 03 2021 Markus Frey <mfrey@mailbox.org> - 0.2.0-4
-- Revert version dump
-
-* Sat Jul 03 2021 Markus Frey <mfrey@mailbox.org> - 0.2.1-1
-- Bump version
-
-* Tue Dec 22 2020 Gergely Gombos <gombosg@disroot.org> - 0.2.0-3
-- Rename -utils subpackage to -tools
-
-* Sat Dec 19 2020 Gergely Gombos <gombosg@disroot.org> - 0.2.0-2
-- Separate CLI utilities into subpackage
-
-* Thu Dec 17 2020 Gergely Gombos <gombosg@disroot.org> - 0.2.0-1
+* Thu Jul 29 2021 Markus Frey <mfrey@mailbox.org> - 0.1.1-1
 - Initial packaging
