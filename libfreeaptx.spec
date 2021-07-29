@@ -7,7 +7,7 @@ Summary:        Open Source implementation of Audio Processing Technology codec 
 
 License:        LGPLv2+
 URL:            https://github.com/iamthehorker/%{name}
-Source0:        %{url}/releases/download/%{version}/%{name}-%{version}.tar.gz
+Source0:        %{url}/archive/refs/tags/%{version}.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  make
